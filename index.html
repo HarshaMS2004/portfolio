@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Harsha M.S - MERN Full Stack Developer" />
+  <title>Harsha M.S | MERN Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">HarshaMS</div>
+    <div class="theme-toggle" id="themeToggle">🌓</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <img src="img/myphoto.jpg" alt="Profile" class="profile-pic" />
+    <h1>Hi, I'm <span class="highlight">Harsha M.S</span></h1>
+    <p><span id="typed-text">I’m a MERN full stack developer passionate about building scalable web apps. Skilled in React, Node.js, and MongoDB.</span></p>
+    <a href="img/resume.pdf" download class="btn">📄 Download Resume</a>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m a MERN full stack developer passionate about building scalable web apps. Skilled in React, Node.js, and MongoDB.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card" onclick="openModal('todoModal')">
+        <h3>📝 Todo App</h3>
+        <p>React + LocalStorage</p>
+      </div>
+      <div class="project-card" onclick="openModal('notesModal')">
+        <h3>🧠 Notes App</h3>
+        <p>MERN Stack</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <p>Email: <a href="mailto:msharsha44@gmail.com">msharsha44@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Harsha M.S | 
+      <a href="https://github.com/HarshaMS2004" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+      <a href="https://www.linkedin.com/in/harsha-m-s-0865a5339" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </footer>
+
+  <!-- Project Modals -->
+  <div class="modal" id="todoModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('todoModal')">&times;</span>
+      <h3>Todo App</h3>
+      <p>This is a simple but powerful task manager built with React. It includes filtering and data persistence.</p>
+      <a href="https://todoapp.example.com" target="_blank" class="btn">View Live</a>
+    </div>
+  </div>
+
+  <div class="modal" id="notesModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('notesModal')">&times;</span>
+      <h3>Notes App</h3>
+      <p>A full CRUD notes app using MongoDB, Express, React, and Node.js. Built with user auth and rich text.</p>
+      <a href="https://notesapp.example.com" target="_blank" class="btn">View Live</a>
+    </div>
+  </div>
+</body>
+</html>
